@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: #222;
+}
+
+.form-wrapper, #my-form input, #button {  border-radius: 3px;  }
+
+.form-wrapper{
+    padding: 30px;
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+}
+
+#my-form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
+    color: #777;
+}
+
+#my-form input { 
+    border: 1px solid #bbb;
+    display: block;
+    width: 300px;
+    height: 2em;;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#button {
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    background: #bb0000;
+    box-sizing: border-box;
+    border: #222 1px solid;
+}
+
+#button:hover {  background: #ff3300;  }
+
+.ui-datepicker {
+    width: 250px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #777;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+    text-align: right;
+}
+
+.ui-datepicker-calendar a{
+    text-decoration: none;
+    color: #222;
+    font-size: 0.8em;
+}
+

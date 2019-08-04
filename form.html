@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="form.css">
+    <title>Animated Form</title>
+</head>
+<body>
+    <div id="my-form-container">
+        <div class="form-wrapper" id="my-form-wrapper">
+            <form id="my-form">
+                <label>Name</label>
+                <input type="text" id="userName">
+                <label>Age</label>
+                <input type="text" id="userAge">
+                <label>Birth Date</label>
+                <input type="text" autocomplete="off" id="userBirthDate">  
+            </form>
+            <button id="button">GO!</button>
+        </div>
+    </div>
+    
+    
+   
+    <script>
+        $( "#userBirthDate" ).datepicker();
+
+        $( "#button" ).on( "click", function(){
+
+            var userInfo = {
+                userName : $("#userName").val(),
+                userAge : $("#userAge").val(),
+                userBirthDate : $("#userBirthDate").val()
+            };
+
+            if (userInfo.userName != "" && userInfo.userAge != "" && userInfo.userBirthDate != "" && userInfo.userAge.match(/^[0-9]*$/)){
+                $( "#my-form-wrapper" ).hide( "blind");
+                
+            } $( "#my-form-wrapper" ).effect( "shake");
+        });
+        
+    </script>
+</body>
+</html>
